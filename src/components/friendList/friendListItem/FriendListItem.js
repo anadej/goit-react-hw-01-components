@@ -3,7 +3,7 @@ import { FriendsListItemStyled } from "./FriendsListItemStyled";
 
 const FrienListItem = ({ friend }) => {
   return (
-    <FriendsListItemStyled>
+    <FriendsListItemStyled active={friend.isOnline}>
       <span className="status" active={friend.isOnline}></span>
       <img
         className="avatar"
