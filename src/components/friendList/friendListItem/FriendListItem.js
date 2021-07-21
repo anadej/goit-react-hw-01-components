@@ -1,10 +1,11 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { FriendsListItemStyled } from "./FriendsListItemStyled";
 
-const FrienListItem = ({ friend }) => {
+const FriendListItem = ({ friend }) => {
   return (
     <FriendsListItemStyled active={friend.isOnline}>
-      <span className="status" active={friend.isOnline}></span>
+      <span className="status"></span>
       <img
         className="avatar"
         src={friend.avatar}
@@ -16,4 +17,8 @@ const FrienListItem = ({ friend }) => {
   );
 };
 
-export default FrienListItem;
+FriendListItem.propTypes = {
+  friend: PropTypes.object,
+};
+
+export default FriendListItem;

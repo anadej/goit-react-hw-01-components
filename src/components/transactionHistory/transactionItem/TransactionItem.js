@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { TransactionItemStyled } from "./TransactionItemStyled";
 
 const TransactionItem = ({ transaction }) => {
@@ -13,4 +14,7 @@ const TransactionItem = ({ transaction }) => {
   );
 };
 
+TransactionItem.propTypes = {
+  transaction: PropTypes.object,
+};
 export default TransactionItem;
